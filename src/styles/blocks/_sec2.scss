@@ -1,0 +1,127 @@
+.sec2 {
+    background-image: url("../img/sec2-bg.jpg");
+    padding-top: 110px;
+
+    @include media(w1366) {
+        padding-top: 80px;
+    }
+
+    &__row-container {
+        font-size: 0;
+        white-space: nowrap;
+    }
+
+    &__col {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+
+        &_left {
+            width: 55%;
+        }
+
+        &_right {
+            text-align: right;
+            width: 45%;
+        }
+    }
+
+    &__number-container {
+        display: inline-block;
+    }
+
+    &__number {
+        color: $main-red;
+        font-family: "Bully",sans-serif;
+        font-size: 360px;
+        line-height: 0.8;
+
+        @include media(w1366) {
+            font-size: 280px;
+        }
+    }
+
+    &__number-img {
+        display: inline-block;
+        width: 80%;
+    }
+
+    &__bottom {
+        background-color: rgba(221,73,78,0.9);
+        padding-top: 60px;
+        padding-bottom: 90px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        @include media(w1366) {
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__img-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        position: absolute;
+
+        &_mountain {
+            bottom: 0;
+            right: 0;
+            width: 65%;
+            z-index: 2;
+        }
+
+        &_auto {
+            transform: rotate(-21deg) translate(0, 0);
+            //left: 20%;
+            right: 37%;
+            bottom: 0%;
+            width: 45%;
+        }
+
+        &_move {
+            animation: sec2AutoMove 1.5s linear forwards alternate;
+        }
+    }
+}
+
+@keyframes sec2AutoMove {
+
+    25% {
+        transform: rotate(-22deg) translate(20%, 0);
+    }
+
+    70% {
+        transform: rotate(-24deg) translate(40%, 6%);
+    }
+
+    25% {
+        transform: rotate(-26deg) translate(60%, 15%);
+    }
+
+    // 50% {
+    //     transform: rotate(-25deg);
+    //     right: 16%;
+    //     bottom: 11%;
+    // }
+
+    // 75% {
+    //     transform: rotate(-26deg);
+    //     right: 6%;
+    //     bottom: 19%;
+    // }
+
+    // 100% {
+    //     transform: rotate(-26deg);
+    //     right: 2%;
+    //     bottom: 22%;
+    // }
+}

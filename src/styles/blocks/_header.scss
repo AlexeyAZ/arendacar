@@ -1,0 +1,45 @@
+.header {
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        @include link(white, white);
+    }
+	
+    &__logo-img {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        max-width: 124px;
+    }
+
+    &__logo-text-container {
+        display: inline-block;
+        padding-top: 20px;
+        vertical-align: top;
+    }
+
+    &__logo-text-bold {
+        margin-bottom: 10px;
+    }
+
+    &__contacts {
+        text-align: right;
+    }
+
+    &__phone {
+        @include link(white, white);
+        display: block;
+    }
+
+    &__get-call {
+        @include link(white, white);
+        border-bottom: 2px dotted white;
+    }
+}

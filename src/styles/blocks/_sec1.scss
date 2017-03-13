@@ -1,0 +1,24 @@
+.sec1 {
+    background-image: url("../img/sec1-bg.jpg");
+
+    &__text-container {
+        display: inline-block;
+        text-align: right;
+    }
+
+    &__auto {
+        transform: translateX(-100%);
+        transition: 2s ease;
+        pointer-events: none;
+        position: absolute;
+        bottom: 50px;
+
+        @include media(w1366) {
+            width: 70%;
+        }
+
+        &_show {
+            transform: translateX(0);
+        }
+    }
+}

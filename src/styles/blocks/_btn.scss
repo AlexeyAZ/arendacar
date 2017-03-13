@@ -1,0 +1,20 @@
+.btn-round {
+    border-radius: 32px;
+    border: none;
+    font-family: "OpenSans";
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 34px;
+    height: 64px;
+
+    @include media(w1366) {
+        font-size: 18px;
+        padding: 0 27px;
+        height: 54px;
+    }
+
+    &_bg_white {
+        background-color: white;
+    }
+}

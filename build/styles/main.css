@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Regular.svg#svgFontName") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-Semibold.eot");
+  src: url("../fonts/OpenSans/OpenSans-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Semibold.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Semibold.svg#svgFontName") format("svg");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/PTSans/PTSans-Regular.eot");
+  src: url("../fonts/PTSans/PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans/PTSans-Regular.woff2") format("woff2"), url("../fonts/PTSans/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans/PTSans-Regular.ttf") format("truetype"), url("../fonts/PTSans/PTSans-Regular.svg#svgFontName") format("svg");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/PTSans/PTSans-Bold.eot");
+  src: url("../fonts/PTSans/PTSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans/PTSans-Bold.ttf") format("truetype"), url("../fonts/PTSans/PTSans-Bold.svg#svgFontName") format("svg");
+  font-style: normal;
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Bully";
+  src: url("../fonts/Bully/Bully.eot");
+  src: url("../fonts/Bully/Bully.eot?#iefix") format("embedded-opentype"), url("../fonts/Bully/Bully.woff2") format("woff2"), url("../fonts/Bully/Bully.woff") format("woff"), url("../fonts/Bully/Bully.ttf") format("truetype"), url("../fonts/Bully/Bully.svg#svgFontName") format("svg");
+  font-style: normal;
+  font-weight: bold; }
+
+.color-white {
+  color: white; }
+
+.ta-center {
+  text-align: center; }
+
+.heading {
+  font-family: "PTSans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.2em; }
+  .heading_s {
+    font-size: 34px; }
+  .heading_l {
+    font-size: 50px; }
+  .heading_xxl {
+    font-size: 107px; }
+    @media only screen and (max-width: 1366px) {
+      .heading_xxl {
+        font-size: 60px; } }
+
+.title {
+  font-family: "PTSans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 1em; }
+  .title_xs {
+    font-size: 20px; }
+  .title_s {
+    font-size: 23px; }
+  .title_m {
+    font-size: 26px; }
+  .title_l {
+    font-size: 30px; }
+  .title_xl {
+    font-size: 32px; }
+  .title_xxl {
+    font-size: 56px; }
+    @media only screen and (max-width: 1366px) {
+      .title_xxl {
+        font-size: 46px; } }
+
+.text {
+  font-family: "OpenSans", sans-serif;
+  margin-bottom: 1em; }
+  .text_pts {
+    font-family: "PTSans", sans-serif; }
+  .text_xs {
+    font-size: 14px; }
+  .text_s {
+    font-size: 16px; }
+  .text_m {
+    font-size: 18px; }
+  .text_l {
+    font-size: 20px; }
+  .text_xl {
+    font-size: 24px; }
+  .text_xxl {
+    font-size: 33px; }
+    @media only screen and (max-width: 1366px) {
+      .text_xxl {
+        font-size: 20px; } }
+  .text_xxxl {
+    font-size: 36px; }
+
+* {
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: "PTSans", sans-serif;
+  position: relative;
+  line-height: 1.2;
+  min-width: 320px; }
+
+.btn-round {
+  border-radius: 32px;
+  border: none;
+  font-family: "OpenSans";
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 34px;
+  height: 64px; }
+  @media only screen and (max-width: 1366px) {
+    .btn-round {
+      font-size: 18px;
+      padding: 0 27px;
+      height: 54px; } }
+  .btn-round_bg_white {
+    background-color: white; }
+
+.header {
+  margin-bottom: 20px;
+  padding-top: 20px; }
+  .header__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
+  .header__logo {
+    color: white;
+    display: inline-block;
+    text-decoration: none; }
+    .header__logo:hover {
+      color: white; }
+    .header__logo:focus {
+      color: white; }
+    .header__logo:active {
+      color: white; }
+    .header__logo:visited {
+      color: white; }
+  .header__logo-img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    max-width: 124px; }
+  .header__logo-text-container {
+    display: inline-block;
+    padding-top: 20px;
+    vertical-align: top; }
+  .header__logo-text-bold {
+    margin-bottom: 10px; }
+  .header__contacts {
+    text-align: right; }
+  .header__phone {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    display: block; }
+    .header__phone:hover {
+      color: white; }
+    .header__phone:focus {
+      color: white; }
+    .header__phone:active {
+      color: white; }
+    .header__phone:visited {
+      color: white; }
+  .header__get-call {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px dotted white; }
+    .header__get-call:hover {
+      color: white; }
+    .header__get-call:focus {
+      color: white; }
+    .header__get-call:active {
+      color: white; }
+    .header__get-call:visited {
+      color: white; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  max-width: 1200px; }
+
+.sec {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%; }
+
+.sec1 {
+  background-image: url("../img/sec1-bg.jpg"); }
+  .sec1__text-container {
+    display: inline-block;
+    text-align: right; }
+  .sec1__auto {
+    -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    transition: 2s ease;
+    pointer-events: none;
+    position: absolute;
+    bottom: 50px; }
+    @media only screen and (max-width: 1366px) {
+      .sec1__auto {
+        width: 70%; } }
+    .sec1__auto_show {
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
+
+.sec2 {
+  background-image: url("../img/sec2-bg.jpg");
+  padding-top: 110px; }
+  @media only screen and (max-width: 1366px) {
+    .sec2 {
+      padding-top: 80px; } }
+  .sec2__row-container {
+    font-size: 0;
+    white-space: nowrap; }
+  .sec2__col {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal; }
+    .sec2__col_left {
+      width: 55%; }
+    .sec2__col_right {
+      text-align: right;
+      width: 45%; }
+  .sec2__number-container {
+    display: inline-block; }
+  .sec2__number {
+    color: #de4a4e;
+    font-family: "Bully",sans-serif;
+    font-size: 360px;
+    line-height: 0.8; }
+    @media only screen and (max-width: 1366px) {
+      .sec2__number {
+        font-size: 280px; } }
+  .sec2__number-img {
+    display: inline-block;
+    width: 80%; }
+  .sec2__bottom {
+    background-color: rgba(221, 73, 78, 0.9);
+    padding-top: 60px;
+    padding-bottom: 90px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+    @media only screen and (max-width: 1366px) {
+      .sec2__bottom {
+        padding-top: 30px;
+        padding-bottom: 40px; } }
+  .sec2__img-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; }
+  .sec2__img {
+    position: absolute; }
+    .sec2__img_mountain {
+      bottom: 0;
+      right: 0;
+      width: 65%;
+      z-index: 2; }
+    .sec2__img_auto {
+      -ms-transform: rotate(-21deg) translate(0, 0);
+          transform: rotate(-21deg) translate(0, 0);
+      right: 37%;
+      bottom: 0%;
+      width: 45%; }
+    .sec2__img_move {
+      animation: sec2AutoMove 1.5s linear forwards alternate; }
+
+@keyframes sec2AutoMove {
+  25% {
+    transform: rotate(-22deg) translate(20%, 0); }
+  70% {
+    transform: rotate(-24deg) translate(40%, 6%); }
+  25% {
+    transform: rotate(-26deg) translate(60%, 15%); } }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-svg--icon-auto-1 {
+  font-size: 8.2rem;
+  width: 1.09634em; }
+
+.icon-svg--icon-auto-2 {
+  font-size: 8.25rem;
+  width: 0.79394em; }
+
+.icon-svg--icon-auto-3 {
+  font-size: 8.24rem;
+  width: 1.2767em; }
+
+.icon-svg--icon-auto-4 {
+  font-size: 7.9rem;
+  width: 0.82278em; }
+
+.icon-svg--icon-auto-5 {
+  font-size: 7.04rem;
+  width: 1.27131em; }
+
+.icon-svg--icon-auto-6 {
+  font-size: 8.33rem;
+  width: 0.9964em; }
+
+.icon-svg--icon-auto-7 {
+  font-size: 8.33rem;
+  width: 0.97239em; }
+
+.icon-svg--icon-auto-8 {
+  font-size: 7.6rem;
+  width: 0.86184em; }
+
+.icon-svg--icon-auto-9 {
+  font-size: 7.04rem;
+  width: 1.27131em; }
+
+.icon-svg--icon-download {
+  font-size: 1.8rem;
+  width: 0.88889em; }
+
+/*# sourceMappingURL=main.css.map */

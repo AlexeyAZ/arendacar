@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: "PTSans", sans-serif;
+    position: relative;
+    line-height: 1.2;
+    min-width: 320px;
+}

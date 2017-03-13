@@ -1,0 +1,96 @@
+.heading {
+    font-family: "PTSans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+
+    &_s {
+        font-size: 34px;
+    }
+
+    &_l {
+        font-size: 50px;
+    }
+
+    &_xxl {
+        font-size: 107px;
+
+        @include media(w1366) {
+            font-size: 60px;
+        }
+    }
+}
+
+.title {
+    font-family: "PTSans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 1em;
+
+    &_xs {
+        font-size: 20px;
+    }
+
+    &_s {
+        font-size: 23px;
+    }
+
+    &_m {
+        font-size: 26px;
+    }
+
+    &_l {
+        font-size: 30px;
+    }
+
+    &_xl {
+        font-size: 32px;
+    }
+
+    &_xxl {
+        font-size: 56px;
+
+        @include media(w1366) {
+            font-size: 46px;
+        }
+    }
+}
+
+.text {
+    font-family: "OpenSans", sans-serif;
+    margin-bottom: 1em;
+
+    &_pts {
+        font-family: "PTSans", sans-serif;
+    }
+
+    &_xs {
+        font-size: 14px;
+    }
+
+    &_s {
+        font-size: 16px;
+    }
+
+    &_m {
+        font-size: 18px;
+    }
+
+    &_l {
+        font-size: 20px;
+    }
+
+    &_xl {
+        font-size: 24px;
+    }
+
+    &_xxl {
+        font-size: 33px;
+
+        @include media(w1366) {
+            font-size: 20px;
+        }
+    }
+
+    &_xxxl {
+        font-size: 36px;
+    }
+}
