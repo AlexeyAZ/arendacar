@@ -11,11 +11,27 @@
         font-size: 50px;
     }
 
+    &_xl {
+        font-size: 67px;
+
+        @include media(w1024) {
+            font-size: 40px;
+        }
+    }
+
     &_xxl {
         font-size: 107px;
 
+        @include media(w1600) {
+            font-size: 60px;
+        }
+
         @include media(w1366) {
             font-size: 60px;
+        }
+
+        @include media(w1024) {
+            font-size: 46px;
         }
     }
 }
@@ -31,6 +47,10 @@
 
     &_s {
         font-size: 23px;
+
+        @include media(w768) {
+            font-size: 20px;
+        }
     }
 
     &_m {
@@ -39,10 +59,18 @@
 
     &_l {
         font-size: 30px;
+
+        @include media(w768) {
+            font-size: 22px;
+        }
     }
 
     &_xl {
         font-size: 32px;
+
+        @include media(w768) {
+            font-size: 26px;
+        }
     }
 
     &_xxl {
@@ -50,6 +78,10 @@
 
         @include media(w1366) {
             font-size: 46px;
+        }
+
+        @include media(w768) {
+            font-size: 30px;
         }
     }
 }
@@ -76,6 +108,10 @@
 
     &_l {
         font-size: 20px;
+
+        @include media(w1366) {
+            font-size: 18px;
+        }
     }
 
     &_xl {
@@ -92,5 +128,13 @@
 
     &_xxxl {
         font-size: 36px;
+
+        @include media(w768) {
+            font-size: 20px;
+        }
+    }
+
+    strong {
+        font-weight: 700;
     }
 }

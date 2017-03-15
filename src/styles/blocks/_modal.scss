@@ -1,0 +1,67 @@
+.g-modal {
+    background-color: rgba(32,32,32,0.8);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    min-width: 320px;
+
+    &__form {
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 10px;
+        padding: 50px 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 26px;
+        width: 26px;
+
+        &:before,
+        &:after {
+            content: "";
+            background-color: #221e1f;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__form-title {
+        font-family: "PTSans", sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__form-input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    &__form-btn {
+        width: 100%;
+    }
+}

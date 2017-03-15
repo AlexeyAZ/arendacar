@@ -1,0 +1,25 @@
+extends templates/layout
+
+block vars
+    - var title = 'Main'
+
+block content
+    section.thanks
+        div.container.thanks__container.ta-center.color-white
+            include templates/header
+            img(src="img/sec1-auto.png", alt="").thanks__auto
+            p.heading.heading_xl.
+                <span class="thanks__name">Анна</span>, наши менеджеры уже занимаются вашей заявкой
+            p.text.text_xxl.
+                Мы постараемся связаться с вами в ближайшее время
+            p.text.text_l.
+                График работы: с 9 00 до 18 00. Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним вам на следующий день
+            button.btn-round.btn-round_bg_white.thanks__btn.js-reguest
+                |Скачать презентацию
+                svg.icon.icon-download
+                    use(xlink:href="#svg--icon-download")
+            br
+            button.btn-round.btn-round_bg_transparent.thanks__btn.
+                Вернуться на сайт
+        include templates/footer
+            

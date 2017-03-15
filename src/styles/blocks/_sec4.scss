@@ -1,0 +1,203 @@
+.sec4 {
+    
+    &__top {
+        background-image: url("../img/sec4-man.png"), url("../img/sec4-bg.png");
+        background-position: right bottom, left 100% center;
+        background-size: auto, cover;
+        background-repeat: no-repeat;
+        padding-top: 60px;
+
+        @include media(w1024) {
+            background-image: url("../img/sec4-man.png");
+            background-position: right 100px bottom;
+            background-size: 25%;
+        }
+
+        @include media(w768) {
+            background-size: 35%;
+            padding-top: 30px;
+        }
+
+        @include media(w600) {
+            background-size: 35%;
+            background-position: center bottom;
+            padding-top: 30px;
+        }
+    }
+
+    &__intro {
+        background-color: $main-red;
+        margin-bottom: 50px;
+        padding: 22px 10px 25px;
+
+        p {
+            margin-bottom: 0;
+
+            @include media(w1024) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+
+        @include media(w1024) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+
+        @include media(w1024) {
+            width: 100%;
+        }
+    }
+
+    &__list-title {
+        margin-bottom: 50px;
+
+        @include media(w768) {
+            text-align: center;
+        }
+    }
+
+    &__list-item {
+        transition: 2s ease;
+        font-size: 5.8em;
+        margin-bottom: 30px;
+        width: 33%;
+
+        &_hide {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        &_show {
+            transform: translateY(30px);
+            opacity: 1;
+        }
+
+        @include media(w1024) {
+            font-size: 5em;
+            text-align: center;
+        }
+
+        @include media(w768) {
+            width: 50%;
+        }
+
+        @include media(w500) {
+            width: 100%;
+        }
+    }
+
+    &__list-item-container {
+        display: inline-block;
+        position: relative;
+    }
+
+    &__list-item-number {
+        color: $main-red;
+        font-family: "Bully", sans-serif;
+        font-size: 157px;
+        line-height: 0.8;
+        opacity: 0.4;
+        position: absolute;
+        top: -27px;
+        right: -2px;
+
+        @include media(w1024) {
+            font-size: 140px;
+        }
+    }
+
+    &__text-container {
+        width: 30%;
+
+        @include media(w1024) {
+            padding-bottom: 150px;
+            width: 45%;
+        }
+
+        @include media(w768) {
+            //text-align: center;
+            width: 50%;
+        }
+
+        @include media(w600) {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 40%;
+            width: 80%;
+        }
+    }
+
+    &__footer {
+        background-color: $main-red;
+        padding: 54px 0;
+
+        @include media(w768) {
+            padding: 30px 0;
+        }
+    }
+
+    &__footer-container {
+        display: flex;
+        align-items: center;
+
+        @include media(w1024) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__footer-col {
+        width: 50%;
+
+        &_left {
+
+            @include media(w1024) {
+                margin-bottom: 30px;
+                width: 70%;
+            }
+
+            @include media(w768) {
+                width: 100%;
+            }
+        }
+
+        &_right {
+            padding: 0 30px;
+
+            @include media(w1024) {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__footer-text {
+        margin-bottom: 0;
+    }
+
+    &__footer-btn {
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    &__footer-file-info {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+}

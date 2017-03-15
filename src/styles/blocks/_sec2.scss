@@ -6,9 +6,18 @@
         padding-top: 80px;
     }
 
+    @include media(w1366) {
+        padding-top: 40px;
+    }
+
     &__row-container {
         font-size: 0;
+        position: relative;
         white-space: nowrap;
+
+        @include media(w500) {
+            padding: 0;
+        }
     }
 
     &__col {
@@ -16,18 +25,59 @@
         vertical-align: top;
         white-space: normal;
 
+        @include media(w1024) {
+            display: block;
+        }
+
+        @include media(w500) {
+            padding: 0 15px;
+        }
+
         &_left {
             width: 55%;
+
+            @include media(w1024) {
+                text-align: center;
+                margin-bottom: 40px;
+                width: 100%;
+            }
         }
 
         &_right {
             text-align: right;
             width: 45%;
+
+            @include media(w1024) {
+                text-align: left;
+                width: 100%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        
+        @include media(w1024) {
+            margin: 0 auto;
+            max-width: 60%;
+        }
+
+        @include media(w768) {
+            margin: 0 auto;
+            max-width: 100%;
         }
     }
 
     &__number-container {
         display: inline-block;
+
+        @include media(w500) {
+            display: block;
+            text-align: center;
+        }
     }
 
     &__number {
@@ -38,6 +88,10 @@
 
         @include media(w1366) {
             font-size: 280px;
+        }
+
+        @include media(w500) {
+            font-size: 200px;
         }
     }
 
@@ -59,9 +113,29 @@
             padding-top: 30px;
             padding-bottom: 40px;
         }
+
+        @include media(w1024) {
+            position: static;
+        }
+    }
+
+    &__bottom-container {
+        
+
+        br {
+            @include media(w1024) {
+                display: none;
+            }
+        }
+
+        @include media(w1024) {
+            text-align: center;
+        }
+        
     }
 
     &__img-container {
+        pointer-events: none;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -72,6 +146,10 @@
     &__img {
         position: absolute;
 
+        @include media(w1024) {
+            display: none;
+        }
+
         &_mountain {
             bottom: 0;
             right: 0;
@@ -80,6 +158,7 @@
         }
 
         &_auto {
+            //transform: rotate(-26deg) translate(60%, 15%);
             transform: rotate(-21deg) translate(0, 0);
             //left: 20%;
             right: 37%;
@@ -88,7 +167,28 @@
         }
 
         &_move {
-            animation: sec2AutoMove 1.5s linear forwards alternate;
+            animation: sec2AutoMove 1.4s linear forwards alternate;
+        }
+
+        &_mauto {
+            display: none;
+            pointer-events: none;
+            width: 64%;
+
+            @include media(w1024) {
+                display: block;
+                right: 0;
+                bottom: 0;
+            }
+
+            @include media(w768) {
+                width: 80%;
+            }
+
+            @include media(w500) {
+                position: static;
+                width: 100%;
+            }
         }
     }
 }
@@ -99,12 +199,16 @@
         transform: rotate(-22deg) translate(20%, 0);
     }
 
-    70% {
+    50% {
         transform: rotate(-24deg) translate(40%, 6%);
     }
 
-    25% {
+    75% {
         transform: rotate(-26deg) translate(60%, 15%);
+    }
+
+    100% {
+        transform: rotate(-27deg) translate(80%, 18%);
     }
 
     // 50% {

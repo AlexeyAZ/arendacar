@@ -1,4 +1,4 @@
-div.section.active
+div.section.active.fp-noscroll
     section.sec.sec1
         div.container.color-white.ta-center
             include header
@@ -7,6 +7,8 @@ div.section.active
             div.sec1__text-container
                 p.text.text_xxl.sec1__text.
                     Заработайте свои первые 3,5 миллиона уже через год
-                button.btn-round.btn-round_bg_white.
-                    Скачать презентацию
-    img.sec1__auto(src="img/sec1-auto.png", alt="")
+                button.btn-round.btn-round_bg_white.js-reguest
+                    |Скачать презентацию
+                    svg.icon.icon-download
+                        use(xlink:href="#svg--icon-download")
+        img.sec1__auto(src="img/sec1-auto.png", alt="")

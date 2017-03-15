@@ -1,6 +1,9 @@
 .btn-round {
+    transition: $trans;
+    border: 2px solid transparent;
     border-radius: 32px;
-    border: none;
+    //border: none;
+    outline: none;
     font-family: "OpenSans";
     font-size: 20px;
     font-weight: 600;
@@ -9,12 +12,65 @@
     height: 64px;
 
     @include media(w1366) {
+        border-radius: 27px;
         font-size: 18px;
         padding: 0 27px;
         height: 54px;
     }
 
+    @include media(w768) {
+        font-size: 15px;
+    }
+
     &_bg_white {
         background-color: white;
+
+        &:hover {
+            animation: btnAnimWhite 0.8s 0s ease-out 1;
+            background-color: $main-red;
+            border-color: white;
+            color: white;
+        }
+    }
+
+    &_bg_red {
+        background-color: $main-red;
+        border-color: $main-red;
+        color: white;
+
+        &:hover {
+            background-color: #ed6367;
+            border-color: #ed6367;
+            animation: btnAnimRed 0.8s 0s ease-out 1;
+        }
+    }
+
+    &_bg_transparent {
+        background-color: transparent;
+        border-color: white;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+@keyframes btnAnimRed {
+    from {
+        box-shadow: 0 0 8px 6px #ed6367, 0 0 12px 14px #ed6367;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+    }
+}
+
+@keyframes btnAnimWhite {
+    from {
+        box-shadow: 0 0 8px 6px white, 0 0 12px 14px white;
+    }
+    to {
+        box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
     }
 }

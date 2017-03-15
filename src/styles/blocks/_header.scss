@@ -10,6 +10,10 @@
 
     &__logo {
         @include link(white, white);
+
+        @include media(w500) {
+            margin-right: 10px;
+        }
     }
 	
     &__logo-img {
@@ -17,12 +21,32 @@
         vertical-align: top;
         margin-right: 10px;
         max-width: 124px;
+
+        @include media(w500) {
+            max-width: 100px;
+        }
     }
 
     &__logo-text-container {
         display: inline-block;
         padding-top: 20px;
+        text-align: left;
         vertical-align: top;
+
+        @include media(w500) {
+            display: none;
+        }
+    }
+
+    &__logo-text {
+
+        &_mobile {
+            display: none;
+
+            @include media(w500) {
+                display: block;
+            }
+        }
     }
 
     &__logo-text-bold {
@@ -31,15 +55,24 @@
 
     &__contacts {
         text-align: right;
+
+        @include media(w500) {
+            text-align: left;
+        }
     }
 
     &__phone {
         @include link(white, white);
         display: block;
+        margin-bottom: 6px;
     }
 
     &__get-call {
         @include link(white, white);
         border-bottom: 2px dotted white;
+
+        @include media(w500) {
+            margin-bottom: 6px;
+        }
     }
 }

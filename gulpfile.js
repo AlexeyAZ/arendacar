@@ -9,9 +9,13 @@ var properties = {
 var plugins = {
     js: [
         'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/fullpage.js/vendors/scrolloverflow.min.js',
         'bower_components/fullpage.js/jquery.fullPage.min.js',
         'bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
-        'bower_components/countUp.js/dist/countUp.min.js'
+        'bower_components/countUp.js/dist/countUp.min.js',
+        'bower_components/vivus/dist/vivus.min.js',
+        'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js',
+        'bower_components/jquery-drawsvg/public/jquery.drawsvg.min.js',
     ],
     css: [
         'bower_components/reset-css/reset.css',

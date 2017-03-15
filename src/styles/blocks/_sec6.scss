@@ -1,0 +1,93 @@
+.sec6 {
+    background-image: url("../img/sec5-bg.jpg");
+    
+    &__img-bg {
+        display: block;
+        width: 100%;
+    }
+
+    &__img-container {
+        transform: translateY(10px);
+        text-align: right;
+        margin-top: -200px;
+
+        @include media(w1366) {
+            display: none;
+        }
+    }
+
+    &__img-auto {
+        display: inline-block;
+        position: relative;
+        width: 84%;
+        z-index: 3;
+    }
+
+    &__container {
+        padding-top: 60px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__form-container {
+        background-image: url("../img/sec5-form-img.png");
+        background-position: left bottom -50px;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-color: white;
+        border-radius: 20px;
+        color: black;
+        margin: 0 auto;
+        padding: 50px 80px 200px;
+        width: 90%;
+
+        @include media(w1366) {
+            border-radius: 20px 20px 0 0;
+            padding-bottom: 100px
+        }
+
+        @include media(w1024) {
+            padding: 30px 30px 50px;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 10px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+
+        @include media(w1024) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__form-input {
+        width: 24%;
+
+        @include media(w1024) {
+            margin: 0 0.5% 20px;
+            width: 32%;
+        }
+
+        @include media(w768) {
+            width: 100%;
+        }
+    }
+
+    &__form-btn {
+
+        @include media(w768) {
+            width: 100%;
+        }
+    }
+}

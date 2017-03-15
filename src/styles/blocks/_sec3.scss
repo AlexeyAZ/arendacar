@@ -1,0 +1,255 @@
+.sec3 {
+    background-image: url("../img/sec3-bg.jpg");
+    background-position: left bottom;
+    overflow: hidden;
+
+    @include media(w1024) {
+        background-image: none;
+        background-size: contain;
+        //padding-bottom: 400px;
+    }
+
+    @include media(w768) {
+        //padding-bottom: 150px;
+    }
+
+    &__img-cars {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100vmax;
+
+        @include media(w1366) {
+            width: calc(100vmax);
+        }
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__container {
+        background-color: white;
+        padding: 70px 150px;
+        height: 100%;
+        width: 90%;
+
+        @include media(w1600) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include media(w1366) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @include media(w1280) {
+            //padding: 30px;
+        }
+
+        @include media(w1024) {
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+
+    &__title {
+
+        @include media(w1024) {
+            text-align: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+
+        @include media(w1024) {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        position: relative;
+        z-index: 1;
+
+        &_list {
+            padding-right: 30px;
+            width: 65%;
+
+            @include media(w1024) {
+                background-color: white;
+                margin-bottom: 20px;
+            }
+        }
+
+        &_facts {
+            width: 35%;
+
+            &:before {
+                content: "";
+                background-image: linear-gradient(to bottom, white, rgba(255,255,255,0));
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 50%;
+                width: 100%;
+                z-index: -1;
+
+                @include media(w768) {
+                    height: 50px;
+                }
+            }
+
+            @include media(w1024) {
+                background-image: url("../img/sec3-bg.jpg");
+                background-position: center bottom;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                padding-bottom: 200px;
+                width: 100%;
+            }
+        }
+
+        @include media(w1024) {
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 100%;
+        }
+
+        @include media(w500) {
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        @include media(w1024) {
+            align-items: flex-start;
+        }
+
+        @include media(w600) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__list-img-container {
+        flex-shrink: 0;
+        position: relative;
+        width: 160px;
+
+        @include media(w768) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list-img-text {
+        color: $main-red;
+        font-family: "Bully", sans-serif;
+        font-size: 35px;
+        text-transform: uppercase;
+        vertical-align: top;
+
+        &_big {
+            font-size: 75px;
+        }
+
+        &_cars {
+            line-height: 1.9;
+            padding-left: 4px;
+        }
+
+        &_document {
+            line-height: 1;
+        }
+    }
+
+    &__list-img {
+        position: absolute;
+
+        &_auto {
+            right: -4px;
+            bottom: -12px;
+        }
+
+        &_cars {
+            right: 6px;
+            bottom: 14px;
+        }
+
+        &_documents {
+            top: -6px;
+            right: 12px;
+        }
+    }
+
+    &__list-text {
+        flex-shrink: 1;
+        line-height: 1.6;
+        padding-left: 10px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__facts {
+        background-image: url("../img/sec3-icon-medal.png");
+        background-position: right 30px top;
+        background-repeat: no-repeat;
+        background-color: $main-red;
+        line-height: 1.6;
+        padding: 40px;
+
+        br {
+            @include media(w500) {
+                display: none;
+            }
+        }
+
+        @include media(w500) {
+            background-size: 50px;
+            background-position: center top;
+            text-align: center;
+            padding: 70px 30px 30px
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        @include media(w1366) {
+            font-size: 15px;
+        }
+
+        @include media(w1024) {
+            width: auto;
+        }
+    }
+
+    &__img-auto {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90%;
+        max-width: 1000px;
+
+        @include media(w1366) {
+            bottom: -100px;
+        }
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+}

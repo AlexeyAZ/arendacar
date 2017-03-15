@@ -1,9 +1,17 @@
 .sec1 {
     background-image: url("../img/sec1-bg.jpg");
 
+    @include media(w1024) {
+        padding-bottom: 200px;
+    }
+
     &__text-container {
         display: inline-block;
         text-align: right;
+
+        @include media(w768) {
+            text-align: center;
+        }
     }
 
     &__auto {
@@ -12,13 +20,35 @@
         pointer-events: none;
         position: absolute;
         bottom: 50px;
+        width: 70%;
+        max-width: 1000px;
 
         @include media(w1366) {
             width: 70%;
         }
 
+        @include media(w768) {
+            width: 90%;
+        }
+
+        @include media(w500) {
+            width: 600px;
+        }
+
         &_show {
             transform: translateX(0);
+
+            @include media(w1024) {
+                transform: translateX(-20%);
+            }
+
+            @include media(w768) {
+                transform: translateX(-40%);
+            }
+
+            @include media(w500) {
+                transform: translateX(-60%);
+            }
         }
     }
 }

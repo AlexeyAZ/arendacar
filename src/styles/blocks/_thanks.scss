@@ -1,0 +1,29 @@
+.thanks {
+    background-image: url("../img/sec1-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 320px;
+
+    &__container {
+        padding-bottom: 8%;
+    }
+
+    &__auto {
+        transform: translateX(-70%);
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        width: 800px;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+}
