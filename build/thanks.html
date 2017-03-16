@@ -14,7 +14,6 @@
       <form class="g-modal__form">
         <div class="g-modal__close"></div>
         <p class="g-modal__form-title">Заказать звонок</p>
-        <!--input(type="text" placeholder="Ваш город" required="").g-input.g-modal__form-input-->
         <input class="g-input g-modal__form-input" type="text" name="name" placeholder="Имя" required="">
         <input class="g-input g-modal__form-input js-input-tel" type="tel" name="phone" placeholder="Телефон" required="">
         <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
@@ -27,6 +26,30 @@
         <input class="g-input g-modal__form-input" type="text" name="name" placeholder="Имя" required="">
         <input class="g-input g-modal__form-input js-input-tel" type="tel" name="phone" placeholder="Телефон" required="">
         <input class="g-input g-modal__form-input" type="email" name="mail" placeholder="E-mail" required="">
+        <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
+      </form>
+    </div>
+    <div class="g-modal g-modal_thanks">
+      <form class="g-modal__form g-modal__form_presentation">
+        <div class="g-modal__close g-modal__close_thanks"></div>
+        <p class="g-modal__form-title">Оставьте заявку на презентацию франшизы</p>
+        <input class="g-input g-modal__form-input" type="text" name="city" placeholder="Ваш город" required="">
+        <input class="g-input g-modal__form-input" type="text" name="age" placeholder="Ваш возраст" required="">
+        <p class="text text_m text_pts ta-center g-modal__form-text">Наличие бизнеса/Опыт бизнеса</p>
+        <select class="g-select g-modal__form-select" required="" name="Наличие бизнеса">
+          <option>Да</option>
+          <option>Нет</option>
+        </select>
+        <p class="text text_m text_pts ta-center g-modal__form-text">Объем планируемых инвестиций</p>
+        <select class="g-select g-modal__form-select" required="" name="Объем планируемых инвестиций">
+          <option>100 000 - 250 000 рублей</option>
+          <option>250 000 - 500 000 рублей</option>
+          <option>500 000 - 750 000 рублей</option>
+          <option>750 000 - 1 000 000 рублей</option>
+          <option>1 000 000 - 1 500 000 рублей</option>
+          <option>1 500 000 - 3 000 000 рублей</option>
+          <option>Более 3 000 000 рублей</option>
+        </select>
         <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
       </form>
     </div>
@@ -47,12 +70,12 @@
         <p class="heading heading_xl"><span class="thanks__name">Анна</span>, наши менеджеры уже занимаются вашей заявкой</p>
         <p class="text text_xxl">Мы постараемся связаться с вами в ближайшее время</p>
         <p class="text text_l">График работы: с 9 00 до 18 00. Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним вам на следующий день</p>
-        <button class="btn-round btn-round_bg_white thanks__btn js-reguest">Скачать презентацию
+        <button class="btn-round btn-round_bg_white thanks__btn thanks__btn-doc">Скачать презентацию
           <svg class="icon icon-download">
             <use xlink:href="#svg--icon-download"></use>
           </svg>
         </button><br>
-        <button class="btn-round btn-round_bg_transparent thanks__btn">Вернуться на сайт</button>
+        <button class="btn-round btn-round_bg_transparent thanks__btn thanks__btn-back">Вернуться на сайт</button>
       </div>
       <footer class="footer">
         <div class="container footer__container">

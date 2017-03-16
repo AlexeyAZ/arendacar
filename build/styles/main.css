@@ -149,6 +149,21 @@ body {
 .icon-auto.icon-auto {
   fill: #de4a4e; }
 
+.show-modal {
+  overflow: hidden; }
+
+.show-get-call-modal .g-modal_get-call {
+  opacity: 1;
+  visibility: visible; }
+
+.show-request-modal .g-modal_request {
+  opacity: 1;
+  visibility: visible; }
+
+.show-thanks-modal .g-modal_thanks {
+  opacity: 1;
+  visibility: visible; }
+
 .btn-round {
   transition: all 0.3s ease;
   border: 2px solid transparent;
@@ -213,15 +228,16 @@ body {
   height: 100%;
   width: 100%;
   z-index: 10;
-  min-width: 320px; }
+  min-width: 320px;
+  overflow: auto; }
   .g-modal__form {
-    -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
     background-color: white;
     border-radius: 10px;
     padding: 50px 30px;
     position: absolute;
-    top: 50%;
+    top: 100px;
     left: 50%;
     width: 300px; }
   .g-modal__close {
@@ -256,6 +272,11 @@ body {
     width: 100%; }
   .g-modal__form-btn {
     width: 100%; }
+  .g-modal__form-text {
+    margin-bottom: 2px; }
+  .g-modal__form-select {
+    margin-bottom: 10px;
+    width: 100%; }
 
 .g-input {
   border: 2px solid #9a9a9a;
@@ -276,6 +297,22 @@ body {
     color: #4f4f4f; }
   @media only screen and (max-width: 1366px) {
     .g-input {
+      border-radius: 27px;
+      font-size: 18px;
+      padding: 0 20px;
+      height: 54px; } }
+
+.g-select {
+  border: 2px solid #9a9a9a;
+  border-radius: 32px;
+  outline: none;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0 25px;
+  height: 64px; }
+  @media only screen and (max-width: 1366px) {
+    .g-select {
       border-radius: 27px;
       font-size: 18px;
       padding: 0 20px;
@@ -839,7 +876,7 @@ body {
         padding: 70px 30px 30px; } }
   .sec3__btn {
     width: 100%; }
-    @media only screen and (max-width: 1366px) {
+    @media only screen and (max-width: 1600px) {
       .sec3__btn {
         font-size: 15px; } }
     @media only screen and (max-width: 1024px) {
@@ -1116,7 +1153,10 @@ body {
       flex-shrink: 0; }
 
 .sec6 {
-  background-image: url("../img/sec5-bg.jpg"); }
+  background-image: url("../img/sec6-bg.jpg"); }
+  @media only screen and (max-width: 1366px) {
+    .sec6 {
+      background-image: url("../img/sec5-bg.jpg"); } }
   .sec6__img-bg {
     display: block;
     width: 100%; }

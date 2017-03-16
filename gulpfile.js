@@ -132,6 +132,11 @@ gulp.task('video', function () {
         .pipe(gulp.dest(properties.folders.build + '/video'))
 });
 
+gulp.task('doc', function () {
+    gulp.src(properties.folders.src + '/doc/**/*.*')
+        .pipe(gulp.dest(properties.folders.build + '/doc'))
+});
+
 gulp.task('font', function () {
     gulp.src(properties.folders.src + '/fonts/**/*.*')
         .pipe(gulp.dest(properties.folders.build + '/fonts'))
@@ -157,6 +162,7 @@ gulp.task('build', [
     'vendor',
     'image',
     'video',
+    'doc',
     'font',
     'json',
     'svgSpriteBuild'
@@ -180,6 +186,9 @@ gulp.task('watch', function() {
     });
     watch(properties.folders.src + '/video/**/*.*', function() {
         gulp.start('video');
+    });
+    watch(properties.folders.src + '/doc/**/*.*', function() {
+        gulp.start('doc');
     });
     watch(properties.folders.src + '/font/**/*.*', function() {
         gulp.start('font');

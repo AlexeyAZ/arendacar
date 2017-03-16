@@ -3,7 +3,6 @@ div.g-modal.g-modal_get-call
         div.g-modal__close
         p.g-modal__form-title.
             Заказать звонок
-        //input(type="text" placeholder="Ваш город" required="").g-input.g-modal__form-input
         input(type="text" name="name" placeholder="Имя" required="").g-input.g-modal__form-input
         input(type="tel" name="phone" placeholder="Телефон" required="").g-input.g-modal__form-input.js-input-tel
         button.btn-round.btn-round_bg_red.g-modal__form-btn.
@@ -16,5 +15,40 @@ div.g-modal.g-modal_request
         input(type="text" name="name" placeholder="Имя" required="").g-input.g-modal__form-input
         input(type="tel" name="phone" placeholder="Телефон" required="").g-input.g-modal__form-input.js-input-tel
         input(type="email" name="mail" placeholder="E-mail" required="").g-input.g-modal__form-input
+        button.btn-round.btn-round_bg_red.g-modal__form-btn.
+            Заказать
+div.g-modal.g-modal_thanks
+    form.g-modal__form.g-modal__form_presentation
+        div.g-modal__close.g-modal__close_thanks
+        p.g-modal__form-title.
+            Оставьте заявку на презентацию франшизы
+        input(type="text" name="city" placeholder="Ваш город" required="").g-input.g-modal__form-input
+        input(type="text" name="age" placeholder="Ваш возраст" required="").g-input.g-modal__form-input
+        p.text.text_m.text_pts.ta-center.g-modal__form-text.
+            Наличие бизнеса/Опыт бизнеса
+        select(required="" name="Наличие бизнеса").g-select.g-modal__form-select
+            option.
+                Да
+            option.
+                Нет
+        p.text.text_m.text_pts.ta-center.g-modal__form-text.
+            Объем планируемых инвестиций
+        select(required="" name="Объем планируемых инвестиций").g-select.g-modal__form-select
+            option.
+                100 000 - 250 000 рублей
+            option.
+                250 000 - 500 000 рублей
+            option.
+                500 000 - 750 000 рублей
+            option.
+                750 000 - 1 000 000 рублей
+            option.
+                1 000 000 - 1 500 000 рублей
+            option.
+                1 500 000 - 3 000 000 рублей
+            option.
+                Более 3 000 000 рублей
+        //- input(type="tel" name="phone" placeholder="Телефон" required="").g-input.g-modal__form-input.js-input-tel
+        //- input(type="email" name="mail" placeholder="E-mail" required="").g-input.g-modal__form-input
         button.btn-round.btn-round_bg_red.g-modal__form-btn.
             Заказать

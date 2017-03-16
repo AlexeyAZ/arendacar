@@ -13,23 +13,50 @@ $(function() {
     };
     
     if (localStorage.getItem('orCarName')) {
-        // console.log(localStorage.getItem('orCarName'))
-        // $(".thanks__name").text(localStorage.getItem('orCarName'));
+        $(".thanks__name").text(localStorage.getItem('orCarName'));
     }
 
     $(".js-input-tel").mask("+7 (999) 999-99-99");
 
-    $(".g-modal__form").submit(function(e) {
-        // var self = $(this);
-        // e.preventDefault();
+    $(".g-modal__form:not(.g-modal__form_presentation)").submit(function(e) {
+        e.preventDefault();
+        var self = $(this);
+        var formData = self.serializeArray();
+        console.log(formData);
 
-        // var selfName = self.find("input[name=name]").val();
+        $.ajax({
+            //url: "",
+            data: formData,
+            success: function(data) {
+                $(".g-modal_thanks").fadeIn();
+            }
+        });
 
-        // localStorage.setItem('orCarName', selfName);
+        var selfName = self.find("input[name=name]").val();
 
-        // var newHostName = window.location.host;
-        // window.location.pathname ="thanks.html"
+        localStorage.setItem('orCarName', selfName);
     });
+
+    $(".g-modal__form_presentation").submit(function(e) {
+        e.preventDefault();
+
+        var self = $(this);
+        var formData = self.serializeArray();
+        console.log(formData);
+
+        $.ajax({
+            //url: "",
+            data: formData,
+            success: function(data) {
+                $(".g-modal").fadeOut();
+                window.location = "thanks.html";
+            }
+        });
+    });
+
+    $(".g-modal_thanks").on("click", function() {
+        
+    })
 
     body.on("click", ".js-get-call", function(e) {
         e.preventDefault();
@@ -40,8 +67,11 @@ $(function() {
     body.on("click", function(e) {
         var target = $(e.target);
 
-        if(target.hasClass("g-modal") || target.hasClass("g-modal__close")) {
+        if((target.hasClass("g-modal") || target.hasClass("g-modal__close")) && (target.hasClass("g-modal_thanks") && target.hasClass("g-modal__close_thanks"))) {
             $(".g-modal").fadeOut();
+        } else if (target.hasClass("g-modal_thanks") || target.hasClass("g-modal__close_thanks")){
+            $(".g-modal").fadeOut();
+            window.location = "thanks.html";
         }
     });
 
@@ -57,6 +87,18 @@ $(function() {
         if(target.hasClass("g-modal") || target.hasClass("g-modal__close")) {
             $(".g-modal").fadeOut();
         }
+    });
+
+    body.on("click", ".thanks__btn-back", function(e) {
+        e.preventDefault();
+
+        window.location = "index.html";
+    });
+
+    body.on("click", ".thanks__btn-doc", function(e) {
+        e.preventDefault();
+
+        window.location = "doc/doc.pdf";
     });
     
     if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -80,17 +122,6 @@ $(function() {
                 }
             },
         });
-
-        $('.sec4').viewportChecker({
-            callbackFunction: function(elem, action) {
-                $(".icon-auto").each(function() {
-                    var self = $(this);
-                    var selfId = self.attr("id");
-                    
-                    //new Vivus(selfId, {duration: 200});
-                });
-            }
-        });
     } else {
         $("#mainFullpage").fullpage({
             scrollOverflow: true,
@@ -102,34 +133,12 @@ $(function() {
                     classToAdd: 'sec2__img_move',
                     classToAddForFullView: 'sec2__img_move',
                 });
-
-                $('.icon-auto').each(function() {
-                    var self = $(this);
-
-                    self.viewportChecker({
-                        classToAdd: '',
-                        classToAddForFullView: '',
-                        callbackFunction: function(elem, action) {
-
-                            var selfId = elem.attr("id");
-                            
-                            //new Vivus(selfId, {duration: 200});
-                        }
-                    });
-                });
             },
 
             afterLoad: function(anchorLink, index) {
                 if (index == 1) {
                     $('.sec1__auto').addClass("sec1__auto_show");
                 } else if (index == 4) {
-                    console.log(4);
-                    $(".icon-auto").each(function() {
-                        var self = $(this);
-                        var selfId = self.attr("id");
-                        
-                        //new Vivus(selfId, {duration: 200});
-                    });
 
                     $('.sec4__list-item').addClass("sec4__list-item_show");
                     

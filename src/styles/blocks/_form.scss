@@ -18,3 +18,21 @@
         height: 54px;
     }
 }
+
+.g-select {
+    border: 2px solid #9a9a9a;
+    border-radius: 32px;
+    outline: none;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 25px;
+    height: 64px;
+
+    @include media(w1366) {
+        border-radius: 27px;
+        font-size: 18px;
+        padding: 0 20px;
+        height: 54px;
+    }
+}

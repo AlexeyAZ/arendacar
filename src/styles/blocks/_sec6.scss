@@ -1,5 +1,9 @@
 .sec6 {
-    background-image: url("../img/sec5-bg.jpg");
+    background-image: url("../img/sec6-bg.jpg");
+
+    @include media(w1366) {
+        background-image: url("../img/sec5-bg.jpg");
+    }
     
     &__img-bg {
         display: block;

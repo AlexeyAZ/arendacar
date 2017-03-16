@@ -27,3 +27,27 @@ body {
     //stroke: $main-red;
     fill: $main-red;
 }
+.show-modal {
+    overflow: hidden;
+}
+.show-get-call-modal {
+
+    .g-modal_get-call {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.show-request-modal {
+
+    .g-modal_request {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.show-thanks-modal {
+
+    .g-modal_thanks {
+        opacity: 1;
+        visibility: visible;
+    }
+}
