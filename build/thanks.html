@@ -25,31 +25,34 @@
         <p class="g-modal__form-title">Оставьте заявку на презентацию франшизы</p>
         <input class="g-input g-modal__form-input" type="text" name="name" placeholder="Имя" required="">
         <input class="g-input g-modal__form-input js-input-tel" type="tel" name="phone" placeholder="Телефон" required="">
-        <input class="g-input g-modal__form-input" type="email" name="mail" placeholder="E-mail" required="">
+        <input class="g-input g-modal__form-input" type="email" name="email" placeholder="E-mail" required="">
         <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
       </form>
     </div>
     <div class="g-modal g-modal_thanks">
       <form class="g-modal__form g-modal__form_presentation">
+        <input class="js-hidden-name" type="hidden" name="name1">
+        <input class="js-hidden-phone" type="hidden" name="phone1">
+        <input class="js-hidden-phone" type="hidden" name="email1">
         <div class="g-modal__close g-modal__close_thanks"></div>
         <p class="g-modal__form-title">Спасибо!</p>
         <p class="g-modal__form-subtitle">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим</p>
         <input class="g-input g-modal__form-input" type="text" name="city" placeholder="Ваш город" required="">
         <input class="g-input g-modal__form-input" type="text" name="age" placeholder="Ваш возраст" required="">
         <p class="text text_m text_pts ta-center g-modal__form-text">Наличие бизнеса/Опыт бизнеса</p>
-        <select class="g-select g-modal__form-select" required="" name="Наличие бизнеса">
-          <option>Да</option>
-          <option>Нет</option>
+        <select class="g-select g-modal__form-select" required="" name="business">
+          <option value="yes">Да</option>
+          <option value="no">Нет</option>
         </select>
         <p class="text text_m text_pts ta-center g-modal__form-text">Объем планируемых инвестиций</p>
-        <select class="g-select g-modal__form-select" required="" name="Объем планируемых инвестиций">
-          <option>100 000 - 250 000 рублей</option>
-          <option>250 000 - 500 000 рублей</option>
-          <option>500 000 - 750 000 рублей</option>
-          <option>750 000 - 1 000 000 рублей</option>
-          <option>1 000 000 - 1 500 000 рублей</option>
-          <option>1 500 000 - 3 000 000 рублей</option>
-          <option>Более 3 000 000 рублей</option>
+        <select class="g-select g-modal__form-select" required="" name="investments">
+          <option value="100 000 - 250 000">100 000 - 250 000 рублей</option>
+          <option value="250 000 - 500 000">250 000 - 500 000 рублей</option>
+          <option value="500 000 - 750 000">500 000 - 750 000 рублей</option>
+          <option value="750 000 - 1 000 000">750 000 - 1 000 000 рублей</option>
+          <option value="1 000 000 - 1 500 000">1 000 000 - 1 500 000 рублей</option>
+          <option value="1 500 000 - 3 000 000">1 500 000 - 3 000 000 рублей</option>
+          <option value="3 000 000 +">Более 3 000 000 рублей</option>
         </select>
         <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
       </form>

@@ -76,6 +76,11 @@ gulp.task('pug', function() {
     });
 });
 
+gulp.task('php', function () {
+    gulp.src(properties.folders.src + '/php/**/*.*')
+        .pipe(gulp.dest(properties.folders.build + '/php/'))
+});
+
 gulp.task('sass', function () {
     gulp.src(properties.folders.src + '/styles/main.scss')
     .pipe(sourcemaps.init())
@@ -157,6 +162,7 @@ gulp.task('server', function() {
 
 gulp.task('build', [
     'pug',
+    'php',
     'sass',
     'scripts',
     'vendor',
@@ -171,6 +177,9 @@ gulp.task('build', [
 gulp.task('watch', function() {
     watch(properties.folders.src + '/views/**/*.pug', function() {
         gulp.start('pug');
+    });
+    watch(properties.folders.src + '/php/**/*.php', function() {
+        gulp.start('php');
     });
     watch(properties.folders.src + '/styles/**/*.scss', function() {
         gulp.start('sass');

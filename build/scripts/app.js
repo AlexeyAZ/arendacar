@@ -18,19 +18,32 @@ $(function () {
 
     $(".js-input-tel").mask("+7 (999) 999-99-99");
 
-    $(".g-modal__form:not(.g-modal__form_presentation)").submit(function (e) {
+    $(".sec6__form,.g-modal__form:not(.g-modal__form_presentation)").submit(function (e) {
         e.preventDefault();
         var self = $(this);
-        var formData = self.serializeArray();
+        var selfName = self.find("input[name=name]");
+        var selfPhone = self.find("input[name=phone]");
+        var selfEmail = self.find("input[name=email]");
+        var formData = self.serialize();
         console.log(formData);
 
-        $.ajax({
-            //url: "",
+        $("[name=name1]").val(selfName.val());
+        $("[name=phone1]").val(selfPhone.val());
+        $("[name=email1]").val(selfEmail.val());
+
+        $.when($.ajax({
+            method: "POST",
+            url: "php/send.php",
             data: formData,
             success: function (data) {
                 $(".g-modal_thanks").fadeIn();
             }
-        });
+        }), $.ajax({
+            method: "POST",
+            url: "php/sendwe.php",
+            data: formData,
+            success: function (data) {}
+        }));
 
         var selfName = self.find("input[name=name]").val();
 
@@ -42,10 +55,10 @@ $(function () {
 
         var self = $(this);
         var formData = self.serializeArray();
-        console.log(formData);
 
         $.ajax({
-            //url: "",
+            method: "POST",
+            url: "php/sendpresent.php",
             data: formData,
             success: function (data) {
                 $(".g-modal").fadeOut();
