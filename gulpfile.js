@@ -77,8 +77,8 @@ gulp.task('pug', function() {
 });
 
 gulp.task('php', function () {
-    gulp.src(properties.folders.src + '/php/**/*.*')
-        .pipe(gulp.dest(properties.folders.build + '/php/'))
+    gulp.src(properties.folders.src + '/phpfiles/**/*.*')
+        .pipe(gulp.dest(properties.folders.build + '/phpfiles/'))
 });
 
 gulp.task('sass', function () {
@@ -178,7 +178,7 @@ gulp.task('watch', function() {
     watch(properties.folders.src + '/views/**/*.pug', function() {
         gulp.start('pug');
     });
-    watch(properties.folders.src + '/php/**/*.php', function() {
+    watch(properties.folders.src + '/phpfiles/**/*.php', function() {
         gulp.start('php');
     });
     watch(properties.folders.src + '/styles/**/*.scss', function() {

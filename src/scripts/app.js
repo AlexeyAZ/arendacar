@@ -34,7 +34,7 @@ $(function() {
         $.when(
             $.ajax({
                 method: "POST",
-                url: "php/send.php",
+                url: "phpfiles/send.php",
                 data: formData,
                 success: function(data) {
                     $(".g-modal_thanks").fadeIn();
@@ -43,7 +43,7 @@ $(function() {
 
             $.ajax({
                 method: "POST",
-                url: "php/sendwe.php",
+                url: "phpfiles/sendwe.php",
                 data: formData,
                 success: function(data) {
                     
@@ -53,7 +53,7 @@ $(function() {
 
         var selfName = self.find("input[name=name]").val();
 
-        localStorage.setItem('orCarName', selfName);
+        localStorage.setItem('orCarName', selfName + ", ");
     });
 
     $(".g-modal__form_presentation").submit(function(e) {
@@ -64,7 +64,7 @@ $(function() {
 
         $.ajax({
             method: "POST",
-            url: "php/sendpresent.php",
+            url: "phpfiles/sendpresent.php",
             data: formData,
             success: function(data) {
                 $(".g-modal").fadeOut();

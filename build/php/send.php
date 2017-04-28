@@ -1,5 +1,5 @@
 <?php
-$sendto = "alex_z@franch5.ru, franchaizing-5@yandex.ru, zvnfranch5@yandex.ru, dacar56oren@gmail.com";
+$sendto = "orendacar@yandex.ru, alex_z@franch5.ru";
 $phone = nl2br($_POST['phone']);
 $name = nl2br($_POST['name']);
 $email = nl2br($_POST['email']);
