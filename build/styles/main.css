@@ -263,7 +263,7 @@ body {
           transform: rotate(-45deg); }
   .g-modal__form-title {
     font-family: "PTSans", sans-serif;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px; }
@@ -483,8 +483,6 @@ body {
     margin-right: 5px; }
   .footer__mail {
     display: block; }
-    .footer__mail.footer__show-note {
-      display: block; }
   .footer__social-link {
     transition: all 0.3s ease;
     color: #7a7676;
@@ -515,7 +513,7 @@ body {
     display: none; }
     @media only screen and (max-width: 1200px) {
       .footer__show-note {
-        display: inline-block; } }
+        display: block; } }
   @media only screen and (max-width: 1200px) {
     .footer__show-pc {
       display: none; } }

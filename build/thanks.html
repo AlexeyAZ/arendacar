@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="g-modal g-modal_get-call">
-      <form class="g-modal__form">
+      <form class="g-modal__form" id="smallForm" data-next="#bigForm">
         <div class="g-modal__close"></div>
         <p class="g-modal__form-title">Заказать звонок</p>
         <input class="g-input g-modal__form-input" type="text" name="name" placeholder="Имя" required="">
@@ -20,17 +20,17 @@
       </form>
     </div>
     <div class="g-modal g-modal_request">
-      <form class="g-modal__form">
+      <form class="g-modal__form" id="middleForm" data-next="#bigForm">
         <div class="g-modal__close"></div>
-        <p class="g-modal__form-title">Оставьте заявку на презентацию франшизы</p>
+        <p class="g-modal__form-title">Заполните форму и скачайте презентацию франшизы</p>
         <input class="g-input g-modal__form-input" type="text" name="name" placeholder="Имя" required="">
         <input class="g-input g-modal__form-input js-input-tel" type="tel" name="phone" placeholder="Телефон" required="">
         <input class="g-input g-modal__form-input" type="email" name="email" placeholder="E-mail" required="">
-        <button class="btn-round btn-round_bg_red g-modal__form-btn">Заказать</button>
+        <button class="btn-round btn-round_bg_red g-modal__form-btn">Скачать (5мб)</button>
       </form>
     </div>
     <div class="g-modal g-modal_thanks">
-      <form class="g-modal__form g-modal__form_presentation">
+      <form class="g-modal__form g-modal__form_presentation" id="bigForm" method="POST">
         <input class="js-hidden-name" type="hidden" name="name1">
         <input class="js-hidden-phone" type="hidden" name="phone1">
         <input class="js-hidden-phone" type="hidden" name="email1">
@@ -61,7 +61,7 @@
     <section class="thanks">
       <div class="container thanks__container ta-center color-white">
         <header class="header">
-          <div class="header__container"><a class="header__logo" href=""><img class="header__logo-img" src="img/header-logo.png" alt="OrendaCar">
+          <div class="header__container"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo.png" alt="OrendaCar">
               <div class="header__logo-text-container">
                 <p class="header__logo-text-bold title title_s">OrenDACAR</p>
                 <p class="header__logo-text-reg text text_xs">Ваш личный сервис<br> проката автомобилей</p>
@@ -71,7 +71,7 @@
             </div>
           </div>
         </header><img class="thanks__auto" src="img/sec1-auto.png" alt="">
-        <p class="heading heading_xl"><span class="thanks__name"></span> наши менеджеры уже занимаются вашей заявкой</p>
+        <p class="heading heading_xl"><span class="thanks__name"></span> менеджеры уже занимаются вашей заявкой</p>
         <p class="text text_xxl">Мы постараемся связаться с вами в ближайшее время</p>
         <p class="text text_l">График работы: с 9 00 до 18 00. Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним вам на следующий день</p>
         <button class="btn-round btn-round_bg_white thanks__btn thanks__btn-doc">Скачать презентацию
@@ -95,10 +95,10 @@
               <p class="footer__text footer__text_adress">Наш офис: Оренбург,<br> пр. Гагарина, 43/6</p><a class="footer__social-link footer__social-link_politic footer__show-pc" href="doc/politic.pdf">Политика конфиденциальности</a>
             </div>
             <div class="footer__col">
-              <div class="footer__mail footer__show-pc"><span class="footer__text">e-mail: </span><a class="footer__social-link footer__social-link_mail" href="mailto:dacar56oren@gmail.com">dacar56oren@gmail.com</a></div>
+              <div class="footer__mail footer__show-pc"><span class="footer__text">e-mail: </span><a class="footer__social-link footer__social-link_mail" href="mailto:orendacar@yandex.ru">orendacar@yandex.ru</a></div>
             </div>
             <div class="footer__col footer__col_contacts"><a class="footer__social-link footer__social-link_phone" href="tel:89033606010">8 903 360-60-10</a><a class="footer__social-link footer__social-link_call js-get-call" href="tel:89033606010">Заказать звонок</a>
-              <div class="footer__mail footer__show-note"><span class="footer__text">e-mail: </span><a class="footer__social-link footer__social-link_mail" href="mailto:dacar56oren@gmail.com">dacar56oren@gmail.com</a></div>
+              <div class="footer__mail footer__show-note"><span class="footer__text">e-mail: </span><a class="footer__social-link footer__social-link_mail" href="mailto:orendacar@yandex.ru">orendacar@yandex.ru</a></div>
             </div>
           </div>
           <div class="footer__mobile"><a class="footer__social-link footer__social-link_phone" href="tel:89033606010">8 903 360-60-10</a><a class="footer__social-link footer__social-link_call js-get-call" href="tel:89033606010">Заказать звонок</a>
@@ -106,7 +106,7 @@
               <div class="footer__social-text footer__text">Мы в соц. сетях</div>
               <div class="footer__social-icons"><a class="footer__social-icon-link" href="https://vk.com/orendacar"><img class="footer__social-icon-img" src="img/icon-vk.png" alt=""></a><a class="footer__social-icon-link" href="http://prokatmashin56.ru"><img class="footer__social-icon-img" src="img/icon-site.png" alt=""></a><a class="footer__social-icon-link" href="https://www.instagram.com/dacar56/"><img class="footer__social-icon-img" src="img/icon-inst.png" alt=""></a><a class="footer__social-icon-link" href="https://www.youtube.com/watch?v=6qDM5m5_hFw&amp;sns=em"><img class="footer__social-icon-img" src="img/icon-yt.png" alt=""></a></div>
             </div>
-            <p class="footer__text footer__text_adress">Наш офис: Оренбург, пр. Гагарина, 43/6</p><a class="footer__social-link footer__social-link_mail" href="mailto:dacar56oren@gmail.com">dacar56oren@gmail.com</a>
+            <p class="footer__text footer__text_adress">Наш офис: Оренбург, пр. Гагарина, 43/6</p><a class="footer__social-link footer__social-link_mail" href="mailto:orendacar@yandex.ru">orendacar@yandex.ru</a>
             <p class="footer__text footer__text_mb">© 2017, «OrenDACAR»</p><a class="footer__social-link footer__social-link_politic" href="doc/politic.pdf">Политика конфиденциальности</a>
           </div>
         </div>
@@ -114,5 +114,34 @@
     </section>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/app.js"></script>
+    <!--Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter44927179 = new Ya.Metrika({
+                      id:44927179,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44927179" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!--/Yandex.Metrika counter-->
   </body>
 </html>

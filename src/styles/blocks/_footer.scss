@@ -95,9 +95,9 @@
     &__mail {
         display: block;
 
-        &.footer__show-note {
-            display: block;
-        }
+        // &.footer__show-note {
+        //     display: block;
+        // }
     }
 
     &__social-link {
@@ -136,7 +136,7 @@
         display: none;
 
         @include media(w1200) {
-            display: inline-block;
+            display: block;
         }
     }
 

@@ -12,75 +12,182 @@ $(function() {
         sec2Timer.start();
     };
     
-    if (localStorage.getItem('orCarName')) {
-        $(".thanks__name").text(localStorage.getItem('orCarName'));
+    if (localStorage.getItem('landclientname')) {
+        $(".thanks__name").text(localStorage.getItem('landclientname'));
     }
 
     $(".js-input-tel").mask("+7 (999) 999-99-99");
 
-    $(".sec6__form,.g-modal__form:not(.g-modal__form_presentation)").submit(function(e) {
-        e.preventDefault();
-        var self = $(this);
-        var selfName = self.find("input[name=name]");
-        var selfPhone = self.find("input[name=phone]");
-        var selfEmail = self.find("input[name=email]");
-        var formData = self.serialize();
-        console.log(formData);
+    // $(".sec6__form,.g-modal__form:not(.g-modal__form_presentation)").submit(function(e) {
+    //     e.preventDefault();
+    //     var self = $(this);
+    //     var selfName = self.find("input[name=name]");
+    //     var selfPhone = self.find("input[name=phone]");
+    //     var selfEmail = self.find("input[name=email]");
+    //     var formData = self.serialize();
+    //     console.log(formData);
 
-        $("[name=name1]").val(selfName.val());
-        $("[name=phone1]").val(selfPhone.val());
-        $("[name=email1]").val(selfEmail.val());
+    //     $("[name=name1]").val(selfName.val());
+    //     $("[name=phone1]").val(selfPhone.val());
+    //     $("[name=email1]").val(selfEmail.val());
 
-        $.when(
-            $.ajax({
-                method: "POST",
-                url: "phpfiles/send.php",
-                data: formData,
-                success: function(data) {
-                    $(".g-modal_thanks").fadeIn();
-                }
-            }),
+    //     $.when(
+    //         $.ajax({
+    //             method: "POST",
+    //             url: "phpfiles/send.php",
+    //             data: formData,
+    //             success: function(data) {
+    //                 $(".g-modal_thanks").fadeIn();
+    //             }
+    //         }),
 
-            $.ajax({
-                method: "POST",
-                url: "phpfiles/sendwe.php",
-                data: formData,
-                success: function(data) {
+    //         $.ajax({
+    //             method: "POST",
+    //             url: "phpfiles/sendwe.php",
+    //             data: formData,
+    //             success: function(data) {
                     
+    //             }
+    //         })
+    //     );
+
+    //     var selfName = self.find("input[name=name]").val();
+
+    //     localStorage.setItem('orCarName', selfName + ", ");
+    // });
+
+    // $(".g-modal__form_presentation").submit(function(e) {
+    //     e.preventDefault();
+
+    //     var self = $(this);
+    //     var formData = self.serializeArray();
+
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "phpfiles/sendpresent.php",
+    //         data: formData,
+    //         success: function(data) {
+    //             $(".g-modal").fadeOut();
+    //             window.location = "thanks.html";
+    //         }
+    //     });
+    // });
+
+    if (typeof wl != "undefined") {
+        wl.callbacks.onFormSubmit = function ($form, res) {
+            var formData;
+            if ($form.data('next')) {
+            
+                if(res.status == 200) {
+                    $(".form-wrap_open").removeClass("form-wrap_open");
+
+                    var selfName = $form.find("input[name=name]");
+                    var selfPhone = $form.find("input[name=phone]");
+                    var selfEmail = $form.find("input[name=email]");
+                    console.log(formData);
+
+                    $("[name=name1]").val(selfName.val());
+                    $("[name=phone1]").val(selfPhone.val());
+                    $("[name=email1]").val(selfEmail.val());
+                    formData = $form.serialize();
+                    
+                   $('.g-modal_get-call').hide();
+                   $(".g-modal_request").hide();
+                   $(".g-modal_thanks").fadeIn();
+
+                    name = selfName.val();
+
+                    if (name) {
+                        localStorage.setItem("landclientname", name + ", наши");
+                    } else {
+                        localStorage.setItem("landclientname", "Наши");
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "phpfiles/sendwe.php",
+                        data: formData,
+                        success: function() {
+                            console.log(1)
+                        }
+                    })
+                } else {  
+                    wl.callbacks.def.onFormSubmit($form, res);
                 }
-            })
-        );
-
-        var selfName = self.find("input[name=name]").val();
-
-        localStorage.setItem('orCarName', selfName + ", ");
-    });
-
-    $(".g-modal__form_presentation").submit(function(e) {
-        e.preventDefault();
-
-        var self = $(this);
-        var formData = self.serializeArray();
-
-        $.ajax({
-            method: "POST",
-            url: "phpfiles/sendpresent.php",
-            data: formData,
-            success: function(data) {
-                $(".g-modal").fadeOut();
+            } else {
+                //formData = $form.serialize();
+                
+                // $.ajax({
+                //     type: "POST",
+                //     url: "phpfiles/sendwe.php",
+                //     data: formData,
+                //     success: function() {
+                //         alert(formData);
+                //         window.location = "thanks.html";
+                //     }
+                // })
+                
                 window.location = "thanks.html";
             }
-        });
-    });
+        };
+    } else {
+        $("#smallForm, #middleForm, #openForm, #bigForm").submit(function(e) {
+            e.preventDefault();
 
-    $(".g-modal_thanks").on("click", function() {
-        
-    })
+            var self = $(this);
+            var selfName = self.find("input[name=name]");
+            var selfPhone = self.find("input[name=phone]");
+            var selfEmail = self.find("input[name=email]");
+            var formData = self.serialize();
+            console.log(formData);
+                   //$(".g-modal_thanks").fadeToggle();
+
+            $("[name=name1]").val(selfName.val());
+            $("[name=phone1]").val(selfPhone.val());
+            $("[name=email1]").val(selfEmail.val());
+
+            $.when(
+                $.ajax({
+                    type: "POST",
+                    url: "phpfiles/send.php",
+                    data: formData,
+                    success: function(data) {
+                        
+                    }
+                }),
+
+                $.ajax({
+                    type: "POST",
+                    url: "phpfiles/sendwe.php",
+                    data: formData,
+                    success: function(data) {
+                        
+                    }
+                })
+            );
+        });
+
+        $("#bigForm").submit(function(e) {
+            e.preventDefault();
+
+            var self = $(this);
+            var formData = self.serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "php/sendpresent.php",
+                data: formData,
+                success: function(data) {
+                    location = "thanks.html";
+                }
+            });
+        });
+    }
 
     body.on("click", ".js-get-call", function(e) {
         e.preventDefault();
 
-        $('.g-modal_get-call').fadeToggle();
+        $('.g-modal_get-call').fadeIn();
     });
 
     body.on("click", function(e) {
@@ -111,7 +218,7 @@ $(function() {
     body.on("click", ".thanks__btn-back", function(e) {
         e.preventDefault();
 
-        window.location = "index.html";
+        window.location = "/";
     });
 
     body.on("click", ".thanks__btn-doc", function(e) {

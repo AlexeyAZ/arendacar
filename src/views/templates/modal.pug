@@ -1,5 +1,5 @@
 div.g-modal.g-modal_get-call
-    form.g-modal__form
+    form#smallForm(data-next="#bigForm").g-modal__form
         div.g-modal__close
         p.g-modal__form-title.
             Заказать звонок
@@ -8,17 +8,17 @@ div.g-modal.g-modal_get-call
         button.btn-round.btn-round_bg_red.g-modal__form-btn.
             Заказать
 div.g-modal.g-modal_request
-    form.g-modal__form
+    form#middleForm(data-next="#bigForm").g-modal__form
         div.g-modal__close
         p.g-modal__form-title.
-            Оставьте заявку на презентацию франшизы
+            Заполните форму и скачайте презентацию франшизы
         input(type="text" name="name" placeholder="Имя" required="").g-input.g-modal__form-input
         input(type="tel" name="phone" placeholder="Телефон" required="").g-input.g-modal__form-input.js-input-tel
         input(type="email" name="email" placeholder="E-mail" required="").g-input.g-modal__form-input
         button.btn-round.btn-round_bg_red.g-modal__form-btn.
-            Заказать
+            Скачать (5мб)
 div.g-modal.g-modal_thanks
-    form.g-modal__form.g-modal__form_presentation
+    form#bigForm.g-modal__form.g-modal__form_presentation(method="POST")
         input(type="hidden" name="name1").js-hidden-name
         input(type="hidden" name="phone1").js-hidden-phone
         input(type="hidden" name="email1").js-hidden-phone
